@@ -1,4 +1,4 @@
 package com.xetius.itemfilter.proxy;
 
-public class Proxy {
+public interface Proxy {
 }

@@ -1,4 +1,4 @@
 package com.xetius.itemfilter.proxy;
 
-public class CommonProxy {
+public abstract class CommonProxy implements Proxy {
 }
