@@ -1,6 +1,7 @@
 package com.xetius.itemfilter;
 
 import com.xetius.itemfilter.handler.ConfigurationHandler;
+import com.xetius.itemfilter.handler.ItemPickupHandler;
 import com.xetius.itemfilter.proxy.Proxy;
 import com.xetius.itemfilter.reference.Reference;
 import com.xetius.itemfilter.utility.LogHelper;
@@ -10,6 +11,7 @@ import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
+import net.minecraftforge.common.MinecraftForge;
 
 @Mod(modid = Reference.MOD_ID, name = Reference.MOD_NAME, version = Reference.VERSION, guiFactory = Reference.GUI_FACTORY_CLASS)
 public class ItemFilter {
@@ -24,6 +26,7 @@ public class ItemFilter {
     public void preInit(FMLPreInitializationEvent event) {
         ConfigurationHandler.init(event.getSuggestedConfigurationFile());
         FMLCommonHandler.instance().bus().register(new ConfigurationHandler());
+        MinecraftForge.EVENT_BUS.register(new ItemPickupHandler());
         LogHelper.info("Pre Initialisation Complete");
     }
 
