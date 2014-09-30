@@ -1,0 +1,17 @@
+[
+{
+  "modid": "XetiusItemFilter",
+  "name": "Xetius's Item Filter",
+  "description": "Xetius's awesome item filter mod",
+  "version": "1.7.10-1.0",
+  "credits": "Created by Xetius",
+  "logoFile": "",
+  "mcversion": "1.7.10",
+  "url": "",
+  "updateUrl": "",
+  "authors": [ "Xetius" ],
+  "parent":"",
+  "screenshots": [],
+  "dependencies": ["mod_MinecraftForge"]
+}
+]
