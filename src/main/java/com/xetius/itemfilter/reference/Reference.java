@@ -7,4 +7,6 @@ public class Reference {
     public static final String CLIENT_PROXY = "com.xetius.itemfilter.proxy.ClientProxy";
     public static final String SERVER_PROXY = "com.xetius.itemfilter.proxy.ServerProxy";
     public static final String GUI_FACTORY_CLASS = "com.xetius.itemfilter.client.gui.GuiFactory";
+
+    public static final String MOD_PREFIX = MOD_ID.toLowerCase() + ":";
 }

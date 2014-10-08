@@ -2,6 +2,7 @@ package com.xetius.itemfilter;
 
 import com.xetius.itemfilter.handler.ConfigurationHandler;
 import com.xetius.itemfilter.handler.ItemPickupHandler;
+import com.xetius.itemfilter.init.ModItems;
 import com.xetius.itemfilter.proxy.Proxy;
 import com.xetius.itemfilter.reference.Reference;
 import com.xetius.itemfilter.utility.LogHelper;
@@ -27,6 +28,7 @@ public class ItemFilter {
         ConfigurationHandler.init(event.getSuggestedConfigurationFile());
         FMLCommonHandler.instance().bus().register(new ConfigurationHandler());
         MinecraftForge.EVENT_BUS.register(new ItemPickupHandler());
+        ModItems.init();
         LogHelper.info("Pre Initialisation Complete");
     }
 
